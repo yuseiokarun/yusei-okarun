@@ -1,3 +1,3 @@
-# Image assets
+# Site image assets
 
-Character artwork on this site is loaded from the official DAN DA DAN website rather than copied into this repository. See the official character page: https://anime-dandadan.com/en/character/
+Season 1 and Season 2 cover artwork supplied by the site owner is stored here and used by the DAN DA DAN season cards.
