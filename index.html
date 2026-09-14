@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Official DAN DA DAN artwork is served from the official anime site. */
+    /* Official DAN DA DAN character artwork is served from the official anime site. */
     .hero-art.official-art{height:570px;position:relative;display:flex;align-items:center;justify-content:center}
     .hero-art.official-art .hero-official-img{width:min(430px,78%);height:520px;object-fit:cover;object-position:center top;position:relative;z-index:2;border:1px solid #292929;box-shadow:-25px 25px 80px rgba(0,0,0,.7),0 0 45px rgba(255,23,56,.12);filter:saturate(1.05)}
     .hero-art.official-art .hero-frame{position:absolute;width:430px;height:520px;border:1px solid #55202a;transform:rotate(6deg);right:9%;top:25px;z-index:1}
@@ -22,6 +22,14 @@
     .character-card .char-face:before,.character-card .char-face:after{display:none}
     .official-credit{margin-top:10px;color:#555;font-size:9px;line-height:1.5;letter-spacing:.4px}
     .official-credit a{color:#777;text-decoration:underline;text-underline-offset:2px}
+    .season-card.has-cover{padding:0;display:flex;flex-direction:column;min-height:390px}
+    .season-card.has-cover .cover-wrap{position:absolute;inset:0;z-index:0;overflow:hidden}
+    .season-card.has-cover .season-cover{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.95) contrast(1.05);transition:transform .4s ease,filter .4s ease}
+    .season-card.has-cover:hover .season-cover{transform:scale(1.04);filter:saturate(1.08) contrast(1.08)}
+    .season-card.has-cover:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(0,0,0,.18) 30%,rgba(0,0,0,.86) 100%);pointer-events:none}
+    .season-card.has-cover .card-top,.season-card.has-cover .season-number,.season-card.has-cover .card-content{z-index:2}
+    .season-card.has-cover .card-top{position:relative}
+    .season-card.has-cover .season-number{color:rgba(255,255,255,.13)}
     @media(max-width:850px){.hero-art.official-art{height:420px}.hero-art.official-art .hero-official-img{height:390px;width:300px}.hero-art.official-art .hero-frame{height:390px;width:300px;right:12%;top:10px}}
   </style>
 </head>
@@ -74,7 +82,8 @@
       </div>
 
       <div class="season-grid">
-        <article class="season-card season-one">
+        <article class="season-card season-one has-cover">
+          <div class="cover-wrap"><img class="season-cover" src="images/season-1-cover.jpg" alt="DAN DA DAN Season 1 cover" loading="lazy"></div>
           <div class="card-top"><span>SEASON 01</span><span>12 EPS</span></div>
           <div class="season-number">01</div>
           <div class="card-content">
@@ -84,7 +93,8 @@
           </div>
         </article>
 
-        <article class="season-card season-two">
+        <article class="season-card season-two has-cover">
+          <div class="cover-wrap"><img class="season-cover" src="images/season-2-cover.jpg" alt="DAN DA DAN Season 2 cover" loading="lazy"></div>
           <div class="card-top"><span>SEASON 02</span><span>12 EPS</span></div>
           <div class="season-number">02</div>
           <div class="card-content">
