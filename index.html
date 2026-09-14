@@ -9,6 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Official DAN DA DAN artwork is served from the official anime site. */
+    .hero-art.official-art{height:570px;position:relative;display:flex;align-items:center;justify-content:center}
+    .hero-art.official-art .hero-official-img{width:min(430px,78%);height:520px;object-fit:cover;object-position:center top;position:relative;z-index:2;border:1px solid #292929;box-shadow:-25px 25px 80px rgba(0,0,0,.7),0 0 45px rgba(255,23,56,.12);filter:saturate(1.05)}
+    .hero-art.official-art .hero-frame{position:absolute;width:430px;height:520px;border:1px solid #55202a;transform:rotate(6deg);right:9%;top:25px;z-index:1}
+    .hero-art.official-art .hero-glow{position:absolute;width:300px;height:300px;border-radius:50%;background:#ff1738;filter:blur(120px);opacity:.13;right:18%;top:130px}
+    .hero-art.official-art .stamp{z-index:4}
+    .character-card .char-face{height:245px;background:#111;display:flex;align-items:center;justify-content:center;padding:0;overflow:hidden}
+    .character-card .char-face img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .35s ease,filter .35s ease}
+    .character-card:hover .char-face img{transform:scale(1.06);filter:saturate(1.12)}
+    .character-card .char-face:before,.character-card .char-face:after{display:none}
+    .official-credit{margin-top:10px;color:#555;font-size:9px;line-height:1.5;letter-spacing:.4px}
+    .official-credit a{color:#777;text-decoration:underline;text-underline-offset:2px}
+    @media(max-width:850px){.hero-art.official-art{height:420px}.hero-art.official-art .hero-official-img{height:390px;width:300px}.hero-art.official-art .hero-frame{height:390px;width:300px;right:12%;top:10px}}
+  </style>
 </head>
 <body>
   <div class="noise"></div>
@@ -41,19 +56,10 @@
         </div>
       </div>
 
-      <div class="hero-art" aria-label="Stylized Okarun inspired artwork">
-        <div class="orbit orbit-a"></div>
-        <div class="orbit orbit-b"></div>
-        <div class="moon">◉</div>
-        <div class="character">
-          <div class="hair"></div>
-          <div class="head">
-            <div class="eye left"></div><div class="eye right"></div>
-            <div class="glasses"></div>
-            <div class="mouth"></div>
-          </div>
-          <div class="coat"></div>
-        </div>
+      <div class="hero-art official-art" aria-label="Official Okarun artwork from DAN DA DAN">
+        <div class="hero-glow"></div>
+        <div class="hero-frame"></div>
+        <img class="hero-official-img" src="https://anime-dandadan.com/_assets/images/char/nav/ken.png" alt="Okarun from DAN DA DAN" loading="eager">
         <div class="stamp">ダンダダン<br><small>DANDADAN</small></div>
         <div class="side-jp">オカルン</div>
       </div>
@@ -111,10 +117,10 @@
         <span class="section-no">02 / 04</span>
       </div>
       <div class="character-grid">
-        <article class="character-card"><span class="char-no">01</span><div class="char-face okarun"></div><h3>OKARUN</h3><p>Occult nerd → cursed powerhouse.</p><span class="tag">ALIEN BELIEVER</span></article>
-        <article class="character-card"><span class="char-no">02</span><div class="char-face momo"></div><h3>MOMO AYASE</h3><p>Spirit medium energy. Zero fear.</p><span class="tag">PSYCHIC</span></article>
-        <article class="character-card"><span class="char-no">03</span><div class="char-face aira"></div><h3>AIRA</h3><p>Chaos, confidence, and Akrobatik.</p><span class="tag">ACRO-SILKY</span></article>
-        <article class="character-card"><span class="char-no">04</span><div class="char-face turbo"></div><h3>TURBO GRANNY</h3><p>Small body. Absolutely massive menace.</p><span class="tag">YOKAI</span></article>
+        <article class="character-card"><span class="char-no">01</span><div class="char-face"><img src="https://anime-dandadan.com/_assets/images/char/nav/ken.png" alt="Okarun from DAN DA DAN" loading="lazy"></div><h3>OKARUN</h3><p>Occult nerd → cursed powerhouse.</p><span class="tag">ALIEN BELIEVER</span><p class="official-credit">Official artwork: <a href="https://anime-dandadan.com/en/character/" target="_blank" rel="noopener">DAN DA DAN</a></p></article>
+        <article class="character-card"><span class="char-no">02</span><div class="char-face"><img src="https://anime-dandadan.com/_assets/images/char/nav/momo.png" alt="Momo Ayase from DAN DA DAN" loading="lazy"></div><h3>MOMO AYASE</h3><p>Spirit medium energy. Zero fear.</p><span class="tag">PSYCHIC</span><p class="official-credit">Official artwork: <a href="https://anime-dandadan.com/en/character/" target="_blank" rel="noopener">DAN DA DAN</a></p></article>
+        <article class="character-card"><span class="char-no">03</span><div class="char-face"><img src="https://anime-dandadan.com/_assets/images/char/nav/aira.png" alt="Aira from DAN DA DAN" loading="lazy"></div><h3>AIRA</h3><p>Chaos, confidence, and Akrobatik.</p><span class="tag">ACRO-SILKY</span><p class="official-credit">Official artwork: <a href="https://anime-dandadan.com/en/character/" target="_blank" rel="noopener">DAN DA DAN</a></p></article>
+        <article class="character-card"><span class="char-no">04</span><div class="char-face"><img src="https://anime-dandadan.com/_assets/images/char/nav/turbo-granny.png" alt="Turbo Granny from DAN DA DAN" loading="lazy"></div><h3>TURBO GRANNY</h3><p>Small body. Absolutely massive menace.</p><span class="tag">YOKAI</span><p class="official-credit">Official artwork: <a href="https://anime-dandadan.com/en/character/" target="_blank" rel="noopener">DAN DA DAN</a></p></article>
       </div>
     </section>
 
