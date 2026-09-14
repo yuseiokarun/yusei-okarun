@@ -1,11 +1,19 @@
-# YUSEI OKARUN // Anime Archive
+# YUSEI OKARUN — DAN DA DAN ARCHIVE V2
 
-Personal anime archive for DAN DA DAN and other anime watched by Yusei Okarun.
+A large static fan archive for GitHub Pages.
 
-## GitHub Pages
+Includes:
+- Series / Seasons 1–3
+- 24-episode archive
+- Character files
+- Yokai + alien database
+- Music / OP / ED section
+- Manga section with official VIZ + MANGA Plus links
+- Season 3 update terminal
+- Personal anime watchlist
+- Responsive mobile layout
+- DAN DA DAN-inspired black/red manga aesthetic
 
-The site is published from the `main` branch root.
+Upload `index.html`, `style.css`, and `script.js` to a GitHub repository and enable GitHub Pages from `main` / root.
 
-## Assets
-
-Season 1 and Season 2 cover artwork supplied by the site owner is stored in `images/` and displayed by the DAN DA DAN season cards.
+This is a fan project, not an official website. It does not host anime episodes or manga scans.
